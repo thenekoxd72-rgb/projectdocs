@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tailwind Fonts Overview</title>
+  <link href="./dist/output.css" rel="stylesheet">
+  <style>
+    body > * { position: relative; z-index: 1; }
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background: linear-gradient(120deg, rgba(255,0,85,0.5) 0%, rgba(0,102,255,0.5) 50%, rgba(128,0,255,0.5) 100%);
+      animation: rgbWave 8s linear infinite alternate;
+      pointer-events: none;
+      z-index: 0;
+    }
+    /* overlay verwijderd */
+    @keyframes rgbWave {
+      0% { background-position: 0% 50%; }
+      100% { background-position: 100% 50%; }
+    }
+
+    .content-card {
+      background: rgba(15, 23, 42, 0.8);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(59, 130, 246, 0.3);
+      transition: all 0.3s ease;
+    }
+
+    .content-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 30px rgba(59, 130, 246, 0.4);
+      border-color: rgba(168, 85, 247, 0.6);
+    }
+
+    .back-button {
+      transition: all 0.3s ease;
+    }
+
+    .back-button:hover {
+      transform: translateX(-5px);
+    }
+
+    .week-title, h1 {
+      font-size: 2rem;
+      line-height: 1.1;
+      font-weight: bold;
+    }
+    h2, .subtitle {
+      font-size: 1.25rem;
+      font-weight: bold;
+      margin-bottom: 0.75em;
+    }
+  </style>
+
+<body class="bg-black text-white min-h-screen overflow-x-hidden">
+
+  <!-- HERO -->
+  <div class="relative w-full h-64 bg-cover bg-center overflow-hidden">
+    <div class="absolute inset-0 bg-gradient-to-b from-blue-900/30 via-transparent to-black/80"></div>
+    <div class="absolute inset-0 flex items-center justify-center z-10">
+      <h1 class="text-5xl font-bold text-white tracking-wider drop-shadow-2xl">
+        Week 1
+      </h1>
+    </div>
+  </div>
+
+  <div class="max-w-4xl mx-auto p-10">
+
+    <a href="index.html" class="back-button inline-flex items-center gap-2 mb-8 px-6 py-3 rounded-lg bg-gradient-to-r from-blue-900/50 to-purple-900/50 border border-blue-400/30 hover:border-purple-400/60 text-blue-200 hover:text-purple-100">
+      <span class="text-xl">←</span>
+      <span>Terug naar overzicht</span>
+    </a>
+
+    <div class="content-card rounded-xl p-8 mb-8">
+      <h2 class="subtitle">Basis uitleg</h2>
+      <p class="text-gray-300 text-lg leading-relaxed">
+        ik heb helemaal niks gedaan deze week. Ik wist gewoon niet hoe ik moest beginnen.
+      </p>
+    </div>
+
+    <div class="border-t border-blue-700/20 my-8"></div>
+
+    <div class="space-y-3">
+
+      <a href="week2.html">
+        <div class="content-card flex flex-col items-center gap-4 p-6 rounded-lg">
+          <span class="text-4xl">📁</span>
+          <span class="font-semibold text-lg text-blue-200">Week 2</span>
+        </div>
+      </a>
+
+      <a href="week3.html">
+        <div class="content-card flex flex-col items-center gap-4 p-6 rounded-lg">
+          <span class="text-4xl">📁</span>
+          <span class="font-semibold text-lg text-blue-200">Week 3</span>
+        </div>
+      </a>
+
+      <a href="week4.html">
+        <div class="content-card flex flex-col items-center gap-4 p-6 rounded-lg">
+          <span class="text-4xl">📁</span>
+          <span class="font-semibold text-lg text-blue-200">Week 4</span>
+        </div>
+      </a>
+
+      <a href="week5.html">
+        <div class="content-card flex flex-col items-center gap-4 p-6 rounded-lg">
+          <span class="text-4xl">📁</span>
+          <span class="font-semibold text-lg text-blue-200">Week 5</span>
+        </div>
+      </a>
+
+      <a href="week6.html">
+        <div class="content-card flex flex-col items-center gap-4 p-6 rounded-lg">
+          <span class="text-4xl">📁</span>
+          <span class="font-semibold text-lg text-blue-200">Week 6</span>
+        </div>
+      </a>
+
+      <a href="week7.html">
+        <div class="content-card flex flex-col items-center gap-4 p-6 rounded-lg">
+          <span class="text-4xl">📁</span>
+          <span class="font-semibold text-lg text-blue-200">Week 7</span>
+        </div>
+      </a>
+
+      <a href="week8.html">
+        <div class="content-card flex flex-col items-center gap-4 p-6 rounded-lg">
+          <span class="text-4xl">📁</span>
+          <span class="font-semibold text-lg text-blue-200">Week 8</span>
+        </div>
+      </a>
+
+    </div>
+  </div>
+   <p>Naam: Jeff Wilson</p>
+    <p>Groep: 1GDM2</p>
+</body>
+</html>

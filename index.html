@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lost in Tra(i)nslation – 8 Weken</title>
+  <link href="./dist/output.css" rel="stylesheet">
+  <style>
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background: linear-gradient(
+      120deg, 
+      #0066ff, 
+      #8000ff, 
+      #ff8800, 
+      #0066ff
+    );
+    background-size: 400% 400%;
+    animation: rgbWave 10s ease infinite;
+    pointer-events: none;
+    z-index: -1;
+  }
+
+  @keyframes rgbWave {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+
+  body::after {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.75);
+    pointer-events: none;
+    z-index: -1;
+  }
+
+  body {
+    background-color: black;
+    margin: 0;
+  }
+
+  body > * { 
+    position: relative; 
+    z-index: 1; 
+  }
+
+  .cursor {
+    position: fixed;
+    width: 16px;
+    height: 16px;
+    border-radius: 9999px;
+    pointer-events: none;
+    z-index: 9999;
+    background: radial-gradient(circle, #60a5fa, #2563eb);
+    mix-blend-mode: screen;
+    animation: cursorPulse 3s linear infinite;
+  }
+
+  @keyframes cursorPulse {
+    0% { filter: hue-rotate(0deg); }
+    100% { filter: hue-rotate(360deg); }
+  }
+
+  .week-card {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease;
+  }
+  
+  .week-card:hover {
+    border-color: rgba(255, 255, 255, 0.5);
+    background: rgba(255, 255, 255, 0.1);
+  }
+</style>
+
+<body class="min-h-screen text-white font-sans overflow-x-hidden bg-black">
+
+<div id="cursor" class="cursor"></div>
+
+<div class="relative w-full h-96 bg-cover bg-center bg-[url('/img/anime_train_clouds_sky_reflection_4k_hd_anime.jpg')]">
+  <div class="absolute inset-0 bg-gradient-to-b from-blue-900/50 via-black/70 to-black"></div>
+  <div class="absolute inset-0 flex items-center justify-center">
+    <h1 class="text-5xl font-bold tracking-wide drop-shadow-xl">Lost in Tra(i)nslation – 8 Weken</h1>
+  </div>
+</div>
+
+<section class="relative max-w-4xl mx-auto -mt-20 px-6">
+  <div class="rounded-3xl bg-black/60 backdrop-blur-xl border border-blue-500/30 p-8 text-center shadow-xl">
+    <p class="text-lg leading-relaxed text-blue-100">
+      In <strong>Prototyping Tools 1</strong> maken studenten stapsgewijs kennis met de fundamenten van digitaal prototypen. Over twaalf weken evolueert het traject van low-fidelity verkenningen naar midi-fidelity prototypes met focus op typografie, kleur, grids, interactie en herbruikbare componenten.
+    </p>
+  </div>
+</section>
+<div class="relative max-w-4xl mx-auto -mt-20 px-6 text-center">
+  <a href="interactieve_schermen_wilsonJeff_2526 .zip" download class="text-blue-500 underline font-bold hover:text-blue-700 inline-block mt-6">
+    (Download Ontwerpdocumentatie <- klik hier)
+  </a>
+</div>
+
+
+
+
+<main class="w-full mx-auto py-20 px-8">
+  <div class="flex flex-wrap gap-10 place-items-center justify-center">
+
+  
+    <a href="week1.html" class="week-card group w-48 h-32 flex flex-col items-center justify-center rounded-2xl backdrop-blur-md border border-blue-500/60 transition hover:scale-105">
+      <span class="text-4xl transition-transform group-hover:scale-110">📁</span>
+      <h2 class="mt-1 text-lg font-semibold text-blue-100">Week 1</h2>
+    </a>
+
+    <a href="week2.html" class="week-card group w-48 h-32 flex flex-col items-center justify-center rounded-2xl backdrop-blur-md border border-blue-500/60 transition hover:scale-105">
+      <span class="text-4xl transition-transform group-hover:scale-110">📁</span>
+      <h2 class="mt-1 text-lg font-semibold text-blue-100">Week 2</h2>
+    </a>
+
+    <a href="week3.html" class="week-card group w-48 h-32 flex flex-col items-center justify-center rounded-2xl backdrop-blur-md border border-blue-500/60 transition hover:scale-105">
+      <span class="text-4xl transition-transform group-hover:scale-110">📁</span>
+      <h2 class="mt-1 text-lg font-semibold text-blue-100">Week 3</h2>
+    </a>
+
+    <a href="week4.html" class="week-card group w-48 h-32 flex flex-col items-center justify-center rounded-2xl backdrop-blur-md border border-blue-500/60 transition hover:scale-105">
+      <span class="text-4xl transition-transform group-hover:scale-110">📁</span>
+      <h2 class="mt-1 text-lg font-semibold text-blue-100">Week 4</h2>
+    </a>
+
+    <a href="week5.html" class="week-card group w-48 h-32 flex flex-col items-center justify-center rounded-2xl backdrop-blur-md border border-blue-500/60 transition hover:scale-105">
+      <span class="text-4xl transition-transform group-hover:scale-110">📁</span>
+      <h2 class="mt-1 text-lg font-semibold text-blue-100">Week 5</h2>
+    </a>
+
+    <a href="week6.html" class="week-card group w-48 h-32 flex flex-col items-center justify-center rounded-2xl backdrop-blur-md border border-blue-500/60 transition hover:scale-105">
+      <span class="text-4xl transition-transform group-hover:scale-110">📁</span>
+      <h2 class="mt-1 text-lg font-semibold text-blue-100">Week 6</h2>
+    </a>
+
+    <a href="week7.html" class="week-card group w-48 h-32 flex flex-col items-center justify-center rounded-2xl backdrop-blur-md border border-blue-500/60 transition hover:scale-105">
+      <span class="text-4xl transition-transform group-hover:scale-110">📁</span>
+      <h2 class="mt-1 text-lg font-semibold text-blue-100">Week 7</h2>
+    </a>
+
+    <a href="week8.html" class="week-card group w-48 h-32 flex flex-col items-center justify-center rounded-2xl backdrop-blur-md border border-blue-500/60 transition hover:scale-105">
+      <span class="text-4xl transition-transform group-hover:scale-110">📁</span>
+      <h2 class="mt-1 text-lg font-semibold text-blue-100">Week 8</h2>
+    </a>
+
+  </div>
+     <p>Naam: Jeff Wilson</p>
+    <p>Groep: 1GDM2</p>
+</main>
+
+<script>
+  const cursor = document.getElementById('cursor');
+  window.addEventListener('mousemove', e => {
+    cursor.style.transform = `translate(${e.clientX - 8}px, ${e.clientY - 8}px)`;
+  });
+</script>
+
+
+</body>
+</html>
